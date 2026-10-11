@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+
+:root {
+    --color-header: #EEEEEE;
+    --color-header-border: #888888;
+    --phone-width: 601px
+}
+
+body {
+    background-color: #767b86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "PT Mono", monospace;
+
+
+    @media screen and (max-width: 601px) {
+        margin: 0;
+        padding: 0;
+        background-color: white;
+}
+
+#kuntayner {
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    width: 600px;
+    @media screen and (max-width: 601px) {
+        border: none;
+        border-radius: 0px;
+        height: 100%;
+    }
+}
+
+header {
+    background-color: var(--color-header);
+    border-bottom: 1px solid var(--color-header-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+/*    gap: 30px;*/
+
+    /*background-color: #cccccc;*/
+
+    width: 100%;
+}
+
+
+
+#memeCanvas {
+display: block;
+max-width: 100%;
+height: auto;
+margin: 0 auto;
+}
+
+#divCanvas {
+    max-width: 500px;    /* Чтобы на огромных мониторах canvas не растягивался больше своего реального разрешения */
+    width: 100%;
+    margin: 0 auto;      /* Центрируем блок на странице */
+
+    @media screen and (max-width: 601px) {
+      max-width: 400px;
+    }
+}
+
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+
+
+
+}
+
+
+
+textarea {
+    max-width: 500px;
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+
+
+
+#keyboard button {
+    font-size: 15pt;
+    font-weight: bold;
+}
+
+
+#keyboard button {
+    min-height: 30px;
+    min-width: 30px;
+}
+
+#keyboard .keyGroup {
+    padding-left: 10px;
+}
+
+#keyboard button {
+font-family: consolas;
+}
+
+#keyboard .kbdLine {
+    display: flex;
+  flex-wrap: nowrap;
+}
+
+
+@media screen and (max-width: 601px) {
+
+    #keyboard .keyGroup {
+    padding-left: 0px;
+    }
+
+    #keyboard button {
+    font-family: monospace;
+    }
+
+    #keyboard .kbdLine {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 0px !important;
+    }
+
+    header h3 { transform: scaleX(0.9); }
+}
+
+
+#slidecontainer, .punkt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* trsrstsrtsr */
+
+#topControl {
+display: flex;
+gap: 0px;
+width: 100%;
+justify-content: center;
+}
+
+
+.punkt, .knopky {
+    border: 1px solid #f0f0f0;
+    border-radius: 6px;
+    min-height: 100px;
+}
+
+.punkt {
+    flex-direction: column;
+    max-width: 290px;
+    gap: 5px;
+   width: 100%;
+}
+
+.punkt input {
+    max-width: 300px;
+    width: 100%;
+}
+
+.knopky {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+       gap: 5px;
+
+}
+
+.punkt input {}
+
+.buttonka {
+    font-size: 10pt;
+/*    font-family: "Segoe UI", sans;*/
+    border: 3px solid #222222;
+    border-radius: 6px;
+
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0px;
+
+/*/*    min-height: 100px;*/
+    min-width: 100px;
+}
+
+.buttonka span {
+    font-family: "Segoe UI", sans;
+    transform: scaleX(0.9);
+    text-align: center;
+}
+
+#upload {
+    background-image: url('upload.svg');
+    background-color: orange;
+}
+#download {
+    background-image: url('download.svg');
+    background-color: #4dabf7;
+}
+
+.gap {
+    min-height: 50px;
+}
+
+.hor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.hor span {
+    min-width: 50px;
+}
+
+
